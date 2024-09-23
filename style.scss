@@ -1,0 +1,19 @@
+.page{
+    max-width : 1400px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding : 10px;
+    background: red;
+    font-family: serif;
+    &__title{
+        color : #000;
+        font-size: 25px;
+        margin-bottom: 10px;
+    };
+    &__description{
+        color : #000;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+}
