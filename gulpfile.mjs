@@ -8,6 +8,9 @@ import minify from 'gulp-minify';
 import imagemin from 'imagemin';
 import imageminJpegtran from 'imagemin-jpegtran';
 import imageminPngquant from 'imagemin-pngquant';
+import babel from 'gulp-babel';
+import uglify from 'gulp-uglify';
+
 
 // Используем gulp-sass с sass-компилятором
 const gulpSass = sass(sassCompiler);
@@ -31,7 +34,10 @@ function buildCss() {
 
 function buildJs() {
     return gulp.src('script.js')
-        .pipe(minify())
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
+        .pipe(uglify())
         .pipe(gulp.dest('dist'));
 }
 

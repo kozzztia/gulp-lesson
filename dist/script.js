@@ -1,4 +1,1 @@
-function foo(){
-    console.log('done')
-}
-foo()
+function foo(){console.log("done")}foo();
