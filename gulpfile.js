@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const cleanCss = require('gulp-clean-css');
 
 function buildStyles() {
     return gulp.src('./style.scss')
@@ -11,6 +12,7 @@ function buildStyles() {
 
 function autoprefixStyles(){
     return gulp.src('./*.css')
+    .pipe(cleanCss())
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('./'));
 
