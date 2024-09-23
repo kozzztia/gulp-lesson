@@ -15,7 +15,7 @@ img {
   min-height: 100vh;
   margin: 0 auto;
   padding: 10px;
-  background: blue;
+  background: red;
   font-family: serif;
   overflow: hidden;
   /* Пример с grid */
@@ -49,7 +49,7 @@ img {
 .page .box {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: orange;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
