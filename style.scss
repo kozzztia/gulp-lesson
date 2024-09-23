@@ -5,15 +5,78 @@
     padding : 10px;
     background: red;
     font-family: serif;
+    overflow: hidden;
     &__title{
-        color : #000;
+        color : #fff;
         font-size: 25px;
         margin-bottom: 10px;
     };
     &__description{
-        color : #000;
-        font-size: 20px;
+        color : #fff;
+        font-size: 40px;
         margin-bottom: 10px;
     }
+    .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      
+      /* Пример с grid */
+      .grid-container {
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      
+      /* Трансформации и переходы */
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        -webkit-transition: -webkit-transform 0.3s ease;
+        transition: -webkit-transform 0.3s ease;
+        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+      }
+      
+      .box:hover {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      
+      /* Пример для focus-visible */
+      input:focus-visible {
+        outline: 2px solid blue;
+      }
+      
+      /* Пример для старых свойств */
+      .example {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+        transition: transform 0.5s, -webkit-transform 0.5s;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
 
 }
